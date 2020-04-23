@@ -1,4 +1,4 @@
-###1. Configuración inicial del entorno
+##### 1. Configuración inicial del entorno
 ```bash
 gcc *.c -o main -I. cabecera && main
 ```
@@ -9,7 +9,7 @@ Poner en el archivo que nos harán crear el mismo nombre que el de la cabecera p
 #include "nombre_cabecera.h"
 ```
 
-#####2. Typedef
+##### 2. Typedef
 
 Estructura simple:
 
@@ -44,7 +44,7 @@ struct NodoHebra
 
 ```
 
-#####3. Paso de parametros
+##### 3. Paso de parametros
 
 :heavy_check_mark:
 ```c
@@ -57,7 +57,7 @@ AnadirProceso(&plan,1)
 AnadirProceso(plan,1)
 ```
 
-#####4. Manejo de Strings
+##### 4. Manejo de Strings
 ```c
 //Añadir
 #include <string.h>
@@ -67,7 +67,7 @@ strcmp(); // Compara dos strings, devuelve 0 cuando son iguales
 strcpy(); // Copia el segundo string en el primero
 ```
 
-#####5. Crear "FILE" (CERRAR SIEMPRE)
+##### 5.1 Crear "FILE" (CERRAR SIEMPRE)
 ```c
 Los pasos a seguir con los archivos son: 
 1.	Declaración.
@@ -82,7 +82,7 @@ FILE *file = fopen(nombre, modo);
 //a Abre para escritura al final del archivo
 ```
 
-#####5.1. Lectura binario
+##### 5.2. Lectura binario
 ```c
 FILE *file = fopen(nombreFich, "rb");
 
@@ -116,7 +116,7 @@ fclose(file);
 
 
 
-#####5.2. Escritura binario
+##### 5.3. Escritura binario
 ```c
 FILE *fd;
 
@@ -139,7 +139,7 @@ fclose(fd);
 ```
 
 
-#####5.3. Lectura normal
+##### 5.4. Lectura normal
 ```c
 FILE *fd;
 
@@ -169,7 +169,7 @@ while(fscanf(fd, "%d", &valor) != EOF) {
 }
 ```
 
-#####5.3. Escritura normal
+##### 5.5. Escritura normal
 ```c
 //Tipo fichero
 
@@ -199,7 +199,7 @@ while(fscanf(fd, "%d", &valor) != EOF) {
 ```
 
 
-#####Crear lista
+##### 6. Crear lista
 
 ```c
 void crear(TListaJugadores *lc) {
@@ -207,7 +207,7 @@ void crear(TListaJugadores *lc) {
 }
 ```
 
-#####Destruir lista
+##### 7.1 Destruir lista
 
 ```c
 void destruir(TListaJugadores *ls) {
@@ -223,7 +223,7 @@ void destruir(TListaJugadores *ls) {
 
 
 
-#####Destruir lista Recursivo
+##### 7.2 Destruir lista Recursivo
 
 ```c
 void Destruir(TColaPrio *cp) {
@@ -238,7 +238,7 @@ void Destruir(TColaPrio *cp) {
 
 
 
-#####Mostrar lista
+##### 8.1. Mostrar lista
 ```c
 void mostrar(TListaJugadores ls) {
 
@@ -251,7 +251,7 @@ void mostrar(TListaJugadores ls) {
 
 
 
-#####Mostrar lista recursiva
+##### 8.2. Mostrar lista recursiva
 ```c
 void Mostrar(TColaPrio cp) {
 
@@ -263,7 +263,7 @@ void Mostrar(TColaPrio cp) {
 
 ```
 
-#####Insertar al final
+##### 9.1. Insertar al final
 ```c
 void Insertar (ListaHebra *ls, char *idhebra, int priohebra) {
 
@@ -282,7 +282,7 @@ void Insertar (ListaHebra *ls, char *idhebra, int priohebra) {
     next -> sig = nuevo;
 }
 ```
-#####Insertar al principio
+##### 9.2. Insertar al principio
 ```c
 void Insertar (ListaHebra *ls, char *idhebra, int priohebra) {
 
@@ -300,7 +300,7 @@ void Insertar (ListaHebra *ls, char *idhebra, int priohebra) {
 
 
 
-#####Insertar Ordenado
+##### 9.3 Insertar Ordenado
 ```c
 void InsertarOrdeando (ListaHebra *ls, char *idhebra, int priohebra) {
 
