@@ -1,4 +1,4 @@
-#####1. Configuración inicial del entorno
+###1. Configuración inicial del entorno
 ```bash
 gcc *.c -o main -I. cabecera && main
 ```
