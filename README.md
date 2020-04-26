@@ -212,9 +212,10 @@ void crear(TListaJugadores *lc) {
 ```c
 void destruir(TListaJugadores *ls) {
 
-    TListaJugadores aux = *ls;
+    TListaJugadores aux = NULL;
 
     while (*ls != NULL) {
+    	aux = (*ls)
         *ls = (*ls) -> sig;
         free(aux);
     }
