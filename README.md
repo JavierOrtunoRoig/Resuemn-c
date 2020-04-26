@@ -274,12 +274,17 @@ void Insertar (ListaHebra *ls, char *idhebra, int priohebra) {
     nuevo -> prioridad = priohebra;
     nuevo -> sig = NULL;
 
+    if (*ls != NULL) {
+        while (next -> sig != NULL) {
+	    next = next -> sig;
+        }
 
-    while (next != NULL) {
-        next = next -> sig;
+        next -> sig = nuevo;
+	
+    } else {
+        *ls = nuevo
     }
-
-    next -> sig = nuevo;
+    
 }
 ```
 ##### 9.2. Insertar al principio
