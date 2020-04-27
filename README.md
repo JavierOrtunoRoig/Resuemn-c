@@ -165,36 +165,37 @@ int valor;
 //fgets(&loQueSeQuiereGuardar, int tamañoMaximo, File);
 while(fscanf(fd, "%d", &valor) != EOF) {
     printf("%d ", valor);
-
 }
+
+fclose(fd)
 ```
 
 ##### 5.5. Escritura normal
 ```c
 //Tipo fichero
 
-	FILE *fd;
+FILE *fd;
 
-	//Abrir fichero (segundo parametro indicamos el uso)
+//Abrir fichero (segundo parametro indicamos el uso)
 
-	fd = fopen("ficheroTexto.txt", "wt");
+fd = fopen("ficheroTexto.txt", "wt");
 
-	if (fd == NULL) {
-		perror("Error creando el fichero");
-	}
+if (fd == NULL) {
+	perror("Error creando el fichero");
+}
 
 
-	//Escritura (si no est� creado el fichero se crea, de lo contrario lo reemplaza)
+//Escritura (si no est� creado el fichero se crea, de lo contrario lo reemplaza)
 
-	int i;
+int i;
 
-	for (i = 0; i<10; i++) {
-		fprintf(fd,"%d ",i);
-	}
+for (i = 0; i<10; i++) {
+	fprintf(fd,"%d ",i);
+}
 
-	//Cerrar fichero
+//Cerrar fichero
 
-	fclose(fd);
+fclose(fd);
 
 ```
 
